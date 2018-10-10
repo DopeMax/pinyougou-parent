@@ -288,5 +288,6 @@
 		<module>pinyougou-sellergoods-service</module>
 		<module>pinyougou-manager-web</module>
 		<module>pinyougou-shop-web</module>
-	</modules>
+        <module>itcast_sms_service</module>
+    </modules>
 </project>
