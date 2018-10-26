@@ -1,5 +1,6 @@
 package com.pinyougou.manager.controller;
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -119,5 +120,10 @@ public class ItemCatController {
 	@RequestMapping("/findByParentId")
 	public List<TbItemCat> findByParentId(Long parentId ){
 		return itemCatService.findByParentId(parentId);
+	}
+
+	@RequestMapping("/selectOptionList")
+	public List<Map> selectOptionList() {
+		return itemCatService.selectOptionList();
 	}
 }

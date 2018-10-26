@@ -1,6 +1,7 @@
 package com.pinyougou.sellergoods.service.impl;
 
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import com.alibaba.dubbo.config.annotation.Service;
@@ -106,6 +107,11 @@ public class ItemCatServiceImpl implements ItemCatService {
         Criteria criteria = example.createCriteria();
         criteria.andParentIdEqualTo(parentId);
         return itemCatMapper.selectByExample(example);
+    }
+
+    @Override
+    public List<Map> selectOptionList() {
+        return itemCatMapper.selectOptionList();
     }
 
 }

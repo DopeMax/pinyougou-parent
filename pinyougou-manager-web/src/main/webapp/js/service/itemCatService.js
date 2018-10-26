@@ -33,4 +33,8 @@ app.service('itemCatService', function ($http) {
     this.findByParentId = function (parentId) {
         return $http.get('../itemCat/findByParentId.do?parentId=' + parentId);
     }
+    // 下拉列表数据
+    this.selectOptionList = function () {
+        return $http.get('../itemCat/selectOptionList.do');
+    }
 });
